@@ -76,11 +76,10 @@
                 contentType: false,
                 processData: false,
                 success:(d)=>{
-                    alert("ok"+d)
+                      toastr.success(`${d}<br>Done`);
                 },
                 error:(d)=>{
-                  alert("error")
-                    console.log(d); 
+              toastr.error(`Error occured`);
                 },
                 complete: (d) => {
                     // console.log(d);
