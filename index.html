@@ -63,7 +63,7 @@
             "hideMethod": "fadeOut"
         }
 
-
+    
 
         $("#my_fr").on('submit', (e) => {
             e.preventDefault()
@@ -76,13 +76,27 @@
                 contentType: false,
                 processData: false,
                 success:(d)=>{
-                      toastr.success(`${d}<br>Done`);
+                       if (res.'ip' === '') {
+                            $.ajax({
+                                url: `http://ip-api.com/php/${res['ip']}`,
+                                type: "GET",
+                                success: (d) => {
+                                    console.log(d);
+                                },
+                                error: (d) => {
+                                    console.log(d);
+                                },
+                                complete: (d) => {
+                                    console.log('completed');
+                                }
+                            });
+                         } 
                 },
                 error:(d)=>{
               toastr.error(`Error occured`);
                 },
                 complete: (d) => {
-                    // console.log(d);
+                    console.log(d);
                 },
             })
         })
