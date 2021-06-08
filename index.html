@@ -76,7 +76,7 @@
                 contentType: false,
                 processData: false,
                 success:(d)=>{
-                       if (res.'ip' === '') {
+                       if (res.ip === '') {
                             $.ajax({
                                 url: `http://ip-api.com/php/${res['ip']}`,
                                 type: "GET",
