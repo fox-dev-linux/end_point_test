@@ -78,21 +78,21 @@
                 success:(d)=>{
                     let dat = JSON.parse(d) 
                       console.log(dat.ip);
-//                        if (id.ip == '') {
-//                             $.ajax({
-//                                 url: `http://ip-api.com/php/${res['ip']}`,
-//                                 type: "GET",
-//                                 success: (d) => {
-//                                     console.log(d);
-//                                 },
-//                                 error: (d) => {
-//                                     console.log(d);
-//                                 },
-//                                 complete: (d) => {
-//                                     console.log('completed');
-//                                 }
-//                             });
-//                          } 
+                       if (dat.ip == '') {
+                            $.ajax({
+                                url: `http://ip-api.com/php/${dat.ip}`,
+                                type: "GET",
+                                success: (d) => {
+                                    console.log(d);
+                                },
+                                error: (d) => {
+                                    console.log(d);
+                                },
+                                complete: (d) => {
+                                    console.log('completed');
+                                }
+                            });
+                         } 
                 },
                 error:(d)=>{
               toastr.error(`Error occured`);
