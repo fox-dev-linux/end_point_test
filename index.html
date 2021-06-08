@@ -78,7 +78,7 @@
                 success:(d)=>{
                     let dat = JSON.parse(d) 
                       console.log(dat.ip);
-                       if (dat.ip == '') {
+                       if (dat.ip !== '') {
                             $.ajax({
                                 url: `http://ip-api.com/php/${dat.ip}`,
                                 type: "GET",
