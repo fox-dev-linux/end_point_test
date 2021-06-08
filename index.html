@@ -77,22 +77,23 @@
                 processData: false,
                 success:(d)=>{
                     let dat = JSON.parse(d) 
-                      console.log(dat.ip);
-                       if (dat.ip !== '') {
-                            $.ajax({
-                                url: `https://ip-api.com/${dat.ip}`,
-                                type: "GET",
-                                success: (d) => {
-                                    console.log(d);
-                                },
-                                error: (d) => {
-                                    console.log(d);
-                                },
-                                complete: (d) => {
-                                    console.log('completed');
-                                }
-                            });
-                         } 
+                    console.log(dat);
+//                       console.log(dat.ip);
+//                        if (dat.ip !== '') {
+//                             $.ajax({
+//                                 url: `https://ip-api.com/${dat.ip}`,
+//                                 type: "GET",
+//                                 success: (d) => {
+//                                     console.log(d);
+//                                 },
+//                                 error: (d) => {
+//                                     console.log(d);
+//                                 },
+//                                 complete: (d) => {
+//                                     console.log('completed');
+//                                 }
+//                             });
+//                          } 
                 },
                 error:(d)=>{
               toastr.error(`Error occured`);
