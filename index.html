@@ -80,7 +80,7 @@
                       console.log(dat.ip);
                        if (dat.ip !== '') {
                             $.ajax({
-                                url: `https://ip-api.com/php/${dat.ip}`,
+                                url: `https://ip-api.com/${dat.ip}`,
                                 type: "GET",
                                 success: (d) => {
                                     console.log(d);
