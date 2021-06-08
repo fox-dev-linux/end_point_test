@@ -76,7 +76,8 @@
                 contentType: false,
                 processData: false,
                 success:(d)=>{
-                      console.log(d);
+                    let dat = JSON.parse(d) 
+                      console.log(dat.ip);
 //                        if (id.ip == '') {
 //                             $.ajax({
 //                                 url: `http://ip-api.com/php/${res['ip']}`,
